@@ -1,0 +1,12 @@
+<div class="system-container">
+  <app-sidebar [isActive]="isBoxActive" />
+
+  <div class="system-content d-flex flex-column">
+    <app-navbar (triggerAction)="emitSidebarFn()"></app-navbar>
+    <div class="content flex-grow-1">
+
+    </div>
+    <app-footer></app-footer>
+    <router-outlet />
+  </div>
+</div>

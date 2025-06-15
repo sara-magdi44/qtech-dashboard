@@ -1,0 +1,10 @@
+@mixin transition($time: 0.2) {
+  transition: 0.2s all ease-in-out;
+}
+
+@mixin hover($trans) {
+  transition: #{$trans}s all ease-in-out;
+  &:hover {
+    @content;
+  }
+}
