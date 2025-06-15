@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 24px;
-  border-bottom: 1px solid var(--neutral-300);
+  border-block-end: 1px solid var(--neutral-300);
   position: relative;
   z-index: 10;
   .menu-icon {
@@ -13,7 +13,6 @@
       inline-size: 22px;
       block-size: 25px;
       &:hover{
-        
       filter: brightness(0) saturate(100%) invert(49%) sepia(98%) saturate(4054%) hue-rotate(214deg) brightness(107%) contrast(99%);         
 
       }
@@ -26,8 +25,8 @@
         align-items: center;
         justify-content: center;
         column-gap: 0;
-        width: 2rem;
-        height: 2rem;
+        inline-size: 2rem;
+        block-size: 2rem;
         border-radius: 100%;
         &:hover{
           background-color: var(--primary-50);
@@ -59,25 +58,25 @@
       .dot{
         position: absolute;
         &::before{
-           content: "";
-          left: -15px;
-          width: 0.6rem;
-          height: 0.6rem;
+          content: "";
+          inset-inline-start: -15px;
+          inline-size: 0.6rem;
+          block-size: 0.6rem;
           border-radius: 50%;
           background-color: var(--neutral-50);
           position: relative;
-          top: 0.25em;
+          inset-block-start: 0.25em;
           display: block;
           }
         &::after{
             content: "";
             left: -14px;
-            width: 0.5rem;
-            height: 0.5rem;
+            inline-size: 0.5rem;
+            block-size: 0.5rem;
             border-radius: 50%;
             position: absolute;
-            top: 0.3em;
-            bottom: unset;
+            inset-block-start: 0.3em;
+            inset-block-end: unset;
         }
         &.notification-dot::after{
           background-color: #6DD230;
