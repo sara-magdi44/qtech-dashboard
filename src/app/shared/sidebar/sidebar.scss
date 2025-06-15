@@ -1,8 +1,8 @@
 .sidebar {
   background-color: var(--neutral-50);
-  min-height: 100vh;
-  border-right: 1px solid var( --neutral-300);
-  min-width: 83px;
+  min-block-size: 100vh;
+  border-inline-end: 1px solid var( --neutral-300);
+  min-inline-size: 83px;
   transition: all 0.2s ease-in-out;
   .logo-box {
     height: 70px;
@@ -16,7 +16,7 @@
     }
   }
   &.open {
-    width: 240px;
+    inline-size: 240px;
     .logo-box {
       .small-logo {
         display: none;
@@ -30,7 +30,7 @@
         li {
           display: block;
           a {
-            width: 100%;
+            inline-size: 100%;
             font-family: "Rubik-Regular";
             span {
               display: block;
@@ -54,7 +54,7 @@
           align-items: center;
           gap: 18px;
           padding: 11px 30px;
-          width: 100%;
+          inline-size: 100%;
           font-size: 14px;
           color: var(--neutral-400);
           transition: all 0.2s ease-in-out;
@@ -68,7 +68,7 @@
           }
           &:hover:not(.active){
             transform: translateX(5px);
-            width: 96%;
+            inline-size: 96%;
             background-color: var(--neutral-200);
             border-inline-start: 3px solid var(--primary);
               img {
