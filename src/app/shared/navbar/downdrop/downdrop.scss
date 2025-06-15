@@ -18,11 +18,11 @@
     }
   @media screen and (max-width: 576px) {
     position: fixed;
-    top: 61px;
-    bottom: 0;
-    right: 0;
-    max-width: 100%;
-    max-height: 350px;
+    inset-block-start: 61px;
+    inset-inline-end: 0;
+    inset-inline-end: 0;
+    max-inline-size: 100%;
+    max-block-size: 350px;
 
   }
   
@@ -58,14 +58,14 @@
         .message {
           color: var(--neutral-350);
           font-size: 13px;
-          width: 255px;
-          height: 20px;
+          inline-size: 255px;
+          block-size: 20px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
 
           @media screen and (max-width: 576px) {
-            width: 200px;
+            inline-size: 200px;
           }
         }
       }
